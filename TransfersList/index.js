@@ -50,7 +50,7 @@ const queryNetwork = async (isFrom, queryAdd, initialBlock, lasBlock) => {
 }
 
 const getTransferEvents = async (contractAdd, queryAdd, requestedBlock) => {
-  console.log("Getting From trasactions of address: ", queryAdd)
+  console.log("Getting From and To trasactions of address: ", queryAdd)
   let latestBlock = (await provider.getBlock('latest')).number
   contract = new ethers.Contract(contractAdd, abi, provider)
   let currentBlock = requestedBlock;
